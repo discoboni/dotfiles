@@ -12,7 +12,7 @@ ln -sf $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -sf $HOME/dotfiles/.Xresources $HOME/.Xresources
 ln -sf $HOME/dotfiles/zsh/.zprofile $HOME/.zprofile
 ln -sf $HOME/dotfiles/zsh/.zshrc $HOME/.zshrc
-ln -sf $HOME/dotfiles/i3/config.conf $HOME/.config/i3/config.conf
+ln -sf $HOME/dotfiles/i3/config $HOME/.config/i3/config
 ln -sf $HOME/dotfiles/i3/i3status.conf $HOME/.config/i3/i3status.conf
 
 #set default shell
