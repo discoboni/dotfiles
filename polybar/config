@@ -245,8 +245,8 @@ spacing = 4
 
 [module/spotify]
 type = custom/script
-exec = ~/.config/polybar/script.py
+exec = ~/.config/polybar/spotifyControl.py
 format-prefix = " "
-click-right = ~/.config/polybar/script.py -n
-click-left = ~/.config/polybar/script.py -p
-click-middle = ~/.config/polybar/script.py -pp 
+click-right = ~/.config/polybar/spotifyControl.py -n
+click-left = ~/.config/polybar/spotifyControl.py -p
+click-middle = ~/.config/polybar/spotifyControl.py -pp 
