@@ -18,8 +18,7 @@ ln -sf $HOME/dotfiles/zsh/.zshrc $HOME/.zshrc
 ln -sf $HOME/dotfiles/i3/config $HOME/.config/i3/config
 ln -sf $HOME/dotfiles/i3/i3status.conf $HOME/.config/i3/i3status.conf
 ln -sf $HOME/dotfiles/polybar/conf $HOME/.config/polybar/conf
-ln -sf $HOME/dotfiles/polybar/spotifyControl.py
-$HOME/.config/polybar/spotifyControl.py
+ln -sf $HOME/dotfiles/polybar/spotifyControl.py $HOME/.config/polybar/spotifyControl.py
 
 #set default shell
 sudo chsh -s /bin/zsh
