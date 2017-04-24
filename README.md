@@ -2,7 +2,7 @@
 
 These are my dotfiles for the following programs
 
-<code>vim i3wm i3status urxvt zsh</code>
+<code>vim i3wm i3status urxvt zsh pacaur polybar</code>
 
 To install simply run:
 
