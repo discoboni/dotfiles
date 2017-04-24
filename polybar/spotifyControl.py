@@ -17,8 +17,7 @@ try:
             dbus_interface="org.freedesktop.DBus.Properties")
 
     def getMeta():
-        print("[" + metadata['xesam:artist'][0] + " : " + metadata['xesam:title'] if
-            'xesam:title' in metadata else 'Unknown' + "]")
+        print("[ " + metadata['xesam:artist'][0] + " : " + metadata['xesam:title'] + " ]")
 
     def getCommand():
             argument = sys.argv[1]
