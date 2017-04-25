@@ -17,5 +17,5 @@ prompt steeef
 export VISUAL="vim"
 
 #aliases
-
 alias paci="sudo pacman -S"
+
