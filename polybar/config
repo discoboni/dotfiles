@@ -28,7 +28,7 @@ font-1 = MaterialIcons:size=10;2
 font-2 = FontAwesome:size=8;1
 
 modules-left = i3 volume spotify
-modules-right = filesystem wired-network cpu memory date
+modules-right = network filesystem cpu memory date
 
 [module/i3]
 type = internal/i3
@@ -202,14 +202,6 @@ bar-progress-empty-font = 4
 bar-progress-empty-foreground = #44
 
 
-[module/wired-network]
-type = internal/network
-interface =
-interval = 3.0
-
-label-connected =    %{T3}%local_ip%%{T-}
-label-disconnected-foreground = #66
-
 [module/clock]
 type = internal/date
 interval = 2
@@ -224,7 +216,15 @@ label-mounted = %mountpoint%: %used% of %total%
 interval = 30
 spacing = 4
 
+[module/network]
+type = internal/network
+interface = wlp0s26u1u2
+label-connected = %essid% %signal%% 
+format-connected =  <label-connected>
+format-disconnected = <label-disconnected>
+
 [module/spotify]
+interval = 2.0
 type = custom/script
 exec = ~/.config/polybar/spotifyControl.py
 format-prefix = " "

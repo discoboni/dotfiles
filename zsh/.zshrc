@@ -6,7 +6,6 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
 
 #auto loads the 'steeef' prompt layout zsh
 autoload -Uz promptinit
@@ -19,3 +18,4 @@ export VISUAL="vim"
 #aliases
 alias paci="sudo pacman -S"
 
+alias musica="python ~/code/pyScripts/musica.py"

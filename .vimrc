@@ -17,6 +17,7 @@ set clipboard=unnamed
 set showmatch
 set cursorline
 set showcmd
+set t_Co=256
 
 colorscheme badwolf
 syntax on
@@ -38,6 +39,7 @@ Plugin 'easymotion/vim-easymotion'
 	let g:EasyMotion_mapping_b = '<leader>\'
 Plugin 'itchyny/lightline.vim'		"powerline for vim
 Plugin 'tpope/vim-surround'
+Plugin 'christoomey/vim-tmux-navigator' "vim and tmux integration
 
 " ======= SNIPPETS =======
 Plugin 'SirVer/ultisnips'
@@ -50,7 +52,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'sjl/badwolf'
 
 " ======= GIT ========
-Plugin 'tpope/vim-fugitive'			"git commands in vim
 Plugin 'airblade/vim-gitgutter'		"shows modification since last commit
 Plugin 'scrooloose/syntastic'		"syntax
 
@@ -65,6 +66,7 @@ Plugin 'davidhalter/jedi-vim'
 
 " ======= WEB DEV ======= 
 Plugin 'mattn/emmet-vim'			"web snippets and some other things
+	let g:user_emmet_install_global = 1
 
 call vundle#end()
 

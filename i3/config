@@ -25,7 +25,6 @@ hide_edge_borders smart #hide side borders if theres only 1 window on screen and
 
 
 #assign applications to their designed workspaces
-assign [class="URxvt"] $terminal
 assign [class="Firefox"] $browser
 assign [class="Spotify"] $music
 
@@ -89,7 +88,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+semicolon split
+bindsym $mod+semicolon split h
 
 # split in vertical orientation
 bindsym $mod+v split v
