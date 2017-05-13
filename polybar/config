@@ -218,7 +218,7 @@ spacing = 4
 
 [module/network]
 type = internal/network
-interface = wlp0s26u1u2
+interface = wlp0s26u1u1
 label-connected = %essid% %signal%% 
 format-connected =  <label-connected>
 format-disconnected = <label-disconnected>

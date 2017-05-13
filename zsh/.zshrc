@@ -1,4 +1,5 @@
 #
+#
 # ~/.zshrc
 #
 
@@ -7,7 +8,6 @@
 
 alias ls='ls --color=auto'
 
-#auto loads the 'steeef' prompt layout zsh
 autoload -Uz promptinit
 promptinit
 prompt steeef
@@ -19,3 +19,9 @@ export VISUAL="vim"
 alias paci="sudo pacman -S"
 
 alias musica="python ~/code/pyScripts/musica.py"
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/bin/virtualenvwrapper.sh
+
+clear
