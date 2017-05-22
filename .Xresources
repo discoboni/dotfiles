@@ -1,4 +1,4 @@
-URxvt*font: xft:Inconsolata:size=12:style=bold
+URxvt*font: xft:Hack:size=12:style=bold
 URxvt*scrollBar: False
 
 ! --==Colors==--
