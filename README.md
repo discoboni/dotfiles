@@ -2,13 +2,14 @@
 
 These are my dotfiles for the following programs
 
-<code>vim i3wm i3status urxvt zsh pacaur polybar</code>
+<code>neovim i3wm urxvt zsh pacaur polybar</code>
 
 To install simply run:
 
 <code>bash install.sh</code>
 
 <strong>EXECUTING THIS SCRIPT WILL ALSO DOWNLOAD ALL OF THE PROGRAMS MENTIONED ABOVE</strong>
+<strong>IT WILL ALSO SET YOUR DEFAULT SHELL AS ZSH</strong>
 
 If you are using any shell other than Bash you'll have to edit the first line the script.
 
