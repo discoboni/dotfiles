@@ -19,7 +19,7 @@ ln -sf $PWD/zsh/zprofile				$HOME/.zprofile
 ln -sf $PWD/zsh/zshrc					$HOME/.zshrc
 ln -sf $PWD/i3/config					$HOME/.config/i3/config
 ln -sf $PWD/polybar/config				$HOME/.config/polybar/config
-ln -sf $PWD/polybar/spotifyControl.py			$HOME/.config/polybar/spotifyControl.py
+ln -sf $PWD/polybar/spotifyControl.py	$HOME/.config/polybar/spotifyControl.py
 
 #set default shell
 sudo chsh -s /bin/zsh
