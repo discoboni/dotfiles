@@ -1,196 +1,219 @@
-[bar/bottom]
-monitor = HDMI-0
-bottom = true
-width = 100%
-height = 24
+;
+;             _       _                                   __ _       
+; _ __   ___ | |_   _| |__   __ _ _ __    ___ ___  _ __  / _(_) __ _ 
+;| '_ \ / _ \| | | | | '_ \ / _` | '__|  / __/ _ \| '_ \| |_| |/ _` |
+;| |_) | (_) | | |_| | |_) | (_| | |    | (_| (_) | | | |  _| | (_| |
+;| .__/ \___/|_|\__, |_.__/ \__,_|_|     \___\___/|_| |_|_| |_|\__, |
+;|_|            |___/                                          |___/ 
 
-background = ${xrdb:color0:#000}    
-foreground = ${xrdb:color7:#ccfffff}
 
-line-color = ${bar/bottom.background}
-line-size = 2
+;*********************************************************
+;
+;                          COLORS
+;
+;**********************************************************
+[colors]
+; Base colors from .Xresources
+bg          =  ${xrdb:background}
+bg-alt      =  #c5c5c5
+fg          =  ${xrdb:foreground}
+fg-alt      =  ${xrdb:color8}
+red         =  ${xrdb:color1}
+red-alt     =  ${xrdb:color9}
+green       =  ${xrdb:color2}
+green-alt   =  ${xrdb:color10}
+yellow      =  ${xrdb:color3}
+yellow-alt  =  ${xrdb:color11}
+blue        =  ${xrdb:color4}
+blue-alt    =  ${xrdb:color12}
+magenta     =  ${xrdb:color5}
+magenta-alt =  ${xrdb:color13}
+cyan        =  ${xrdb:color6}
+cyan-alt    =  ${xrdb:color14}
+white       =  ${xrdb:color7}
+white-alt   =  ${xrdb:color15}
 
-spacing = 3
-padding-right = 4
-padding-left = 4
+
+
+;**********************************************************
+;
+;                       GLOBAL WM SETTINGS
+;
+;**********************************************************
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+
+;*********************************************************
+;
+;                       BAR SETTINGS
+;
+;********************************************************
+[bar/top]
+monitor   = HDMI-0
+bottom    = false
+width     = 100% 
+height    = 30 
+offset-x  = 10
+offset-y  = 10
+override-redirect = false
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+spacing = 0
+padding-left = 0
+padding-right = 0
 module-margin-left = 0
-module-margin-right = 6
+module-margin-right = 0
 
-font-0 = NotoSans-Regular:size=8;1
-font-1 = MaterialIcons:size=10;2
-font-2 = FontAwesome:size=8;1
+font-0 = Fantasque Sans Mono:size=10;3
+font-1 = Material Icons:antialia=false:size=12;5
 
-modules-left = i3 volume spotify
-modules-right = network filesystem cpu memory date
+modules-left = i3 uptime
+modules-center =  date
+modules-right = wired-network temperature cpu memory
+
+
+;**********************************************************
+;
+;                   MODULES SETTINGS
+;
+;**********************************************************
+
 
 [module/i3]
 type = internal/i3
 
 format = <label-state> <label-mode>
 
-index-sort = true
+; Available tokens:
+;   %mode%
+; Default: %mode%
+label-mode = %mode%
+label-mode-padding = 1
+label-mode-background = #e60053
 
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-focused = %index%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+label-focused-padding = 1
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-unfocused = %index%
+label-unfocused-padding = 1
 
-; focused = Active workspace on focused monitor
-label-focused = %name% 
-label-focused-foreground = ${xrdb:color7:#fff}
-label-focused-background = ${xrdb:color18:#773f3f3f}
-label-focused-underline= ${xrdb:color1:#c9665e}
-label-focused-padding = 4
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-visible = %index%
+label-visible-underline = #555555
+label-visible-padding = 1
 
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %name%
-label-unfocused-padding = 4
-label-unfocused-foreground = #dd
-label-unfocused-underline = #666
-
-; visible = Active workspace on unfocused monitor
-label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${xrdb:color4:self-label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %name%
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-urgent = %index%
 label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
-label-urgent-underline = #9b0a20
-label-urgent-padding = 4
-
-[module/volume]
-type = internal/volume
-
-
-master-mixer = Master
-speaker-mixer = PCM
-headphone-mixer = Headphone
-headphone-id = 37
-
-master-soundcard = default
-speaker-soundcard = default
-headphone-soundcard = default
-
-mapping = true
-
-label-volume = %percentage%%
-format-volume = <ramp-volume> <label-volume>
-label-muted =   muted
-label-muted-foreground = #66
-
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-
-ramp-headphones-0 = 
-ramp-headphones-1 = 
-format-volume-underline = #FFF
-
-[module/backlight]
-type = internal/xbacklight
-format = <ramp> <bar>
-
-ramp-0 = fa-lightbulb-o  
-ramp-1 = 
-ramp-2 = 
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-font = 3
-bar-indicator-foreground = #ff
-bar-fill = ─
-bar-fill-font = 3
-bar-fill-foreground = #c9665e
-bar-empty = ─
-bar-empty-font = 3
-bar-empty-foreground = #44
+label-urgent-padding = 1
 
 [module/cpu]
 type = internal/cpu
-interval = 0.5
-format = <label> <ramp-coreload>
-label = CPU
-
-ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
-ramp-coreload-0-foreground = #aaff77
-ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
-ramp-coreload-1-foreground = #aaff77
-ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
-ramp-coreload-2-foreground = #aaff77
-ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
-ramp-coreload-3-foreground = #aaff77
-ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = #fba922
-ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = #fba922
-ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
-ramp-coreload-6-foreground = #ff5555
-ramp-coreload-7 = █
-ramp-coreload-7-font = 2
-ramp-coreload-7-foreground = #ff5555
-
-[module/date]
-type = internal/date
-date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
-format-underline = #0C0
+interval = 2
+format-prefix = " cpu "
+format-prefix-foreground = ${colors.yellow}
+label = "%percentage%% "
 
 [module/memory]
 type = internal/memory
-format = <label> <bar-used>
-label = RAM
-
-bar-used-width = 30
-bar-used-foreground-0 = #aaff77
-bar-used-foreground-1 = #aaff77
-bar-used-foreground-2 = #fba922
-bar-used-foreground-3 = #ff5555
-bar-used-indicator = |
-bar-used-indicator-font = 6
-bar-used-indicator-foreground = #ff
-bar-used-fill = ─
-bar-used-fill-font = 6
-bar-used-empty = ─
-bar-used-empty-font = 6
-bar-used-empty-foreground = #444444
-
-[module/clock]
-type = internal/date
 interval = 2
-date = %%{F#999}%d-%m-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
+format-prefix = " mem "
+format-prefix-foreground = ${colors.cyan}
+label = "%percentage_used%% "
 
-[module/filesystem]
-type = internal/fs
-
-mount-0 = /
-fixed-values = true
-label-mounted = %mountpoint%: %used% of %total%
-interval = 5
-spacing = 2 
-
-[module/network]
+[module/wired-network]
 type = internal/network
 interface = enp3s0
-format-connected =  <label-connected>
+
+format-connected =  <label-connected>
 format-disconnected = <label-disconnected>
 
-[module/spotify]
-interval = 2.0
+interval = 3.0
+
+label-connected = %downspeed% %upspeed%
+label-connected-foreground = #eefafafa
+label-connected-padding = 5 
+
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+label-disconnected-padding = 5 
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = "%temperature%"
+label-warn = "%temperature%"
+label-warn-foreground = ${colors.red}
+
+ramp-0 = "temp" 
+ramp-foreground = ${colors.magenta}
+
+[module/menu]
+type = custom/text
+
+content = " menu "
+content-foreground = ${colors.white}
+content-background = ${colors.magenta}
+click-left = ~/.config/popups/todo/todo
+
+[module/date]
+type = internal/date
+interval = 5
+
+date= "%a %d %b %Y"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+label = "%{F#e5322f}%date% %{F-}%time%"
+
+[module/uptime]
 type = custom/script
-exec = ~/.config/polybar/spotifyControl.py
-format-prefix = " "
-click-right = ~/.config/polybar/spotifyControl.py -n
-click-left = ~/.config/polybar/spotifyControl.py -p
-click-middle = ~/.config/polybar/spotifyControl.py -pp 
-format-underline = #09F
+interval = 1200
+format = "<label> "
+format-prefix = " Uptime: "
+format-prefix-foreground = ${colors.cyan}
+exec = ~/.config/polybar/uptime
+
+[module/power-label]
+type = custom/text
+content = " Power "
+
+content-foreground = ${colors.bg}
+content-background = ${colors.magenta-alt}
+click-left = bash ~/.config/popups/power/power
+
+; vim:ft=dosini
 

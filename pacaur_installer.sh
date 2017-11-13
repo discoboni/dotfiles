@@ -2,6 +2,10 @@
 mkdir -p /tmp/pacaur_install
 cd /tmp/pacaur_install
 
+# If you didn't install the "base-devel" group,
+# we'll need those.
+sudo pacman -S binutils make gcc fakeroot pkg-config --noconfirm --needed
+
 # Install pacaur dependencies from arch repos
 sudo pacman -S expac yajl git --noconfirm --needed
 
@@ -19,5 +23,4 @@ fi
 
 # Clean up...
 cd ~
-rm -r /tmp/pacaur_install%                                                                                                              
-
+rm -r /tmp/pacaur_install
