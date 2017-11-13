@@ -3,8 +3,8 @@
 #install pacaur AUR Package manager
 ./pacaur_installer.sh
 #install necessary programs
-#edit this line according to what package manager you are using
-sudo pacman -S neovim rxvt-unicode git
+#List of programs:
+sudo pacman -S openssh neovim rxvt-unicode git
 
 #install 'vim-plug' - a plugin manager for NEOVIM
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
