@@ -88,47 +88,23 @@ type = internal/i3
 
 format = <label-state> <label-mode>
 
-; Available tokens:
-;   %mode%
-; Default: %mode%
 label-mode = %mode%
 label-mode-padding = 1
 label-mode-background = #e60053
 
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-;   %output%
-; Default: %icon%  %name%
 label-focused = %index%
 label-focused-foreground = #ffffff
 label-focused-background = #3f3f3f
 label-focused-underline = #fba922
 label-focused-padding = 1
 
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
 label-unfocused = %index%
 label-unfocused-padding = 1
 
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
 label-visible = %index%
 label-visible-underline = #555555
 label-visible-padding = 1
 
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
 label-urgent = %index%
 label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
@@ -180,14 +156,6 @@ label-warn-foreground = ${colors.red}
 ramp-0 = "temp" 
 ramp-foreground = ${colors.magenta}
 
-[module/menu]
-type = custom/text
-
-content = " menu "
-content-foreground = ${colors.white}
-content-background = ${colors.magenta}
-click-left = ~/.config/popups/todo/todo
-
 [module/date]
 type = internal/date
 interval = 5
@@ -206,14 +174,5 @@ format = "<label> "
 format-prefix = " Uptime: "
 format-prefix-foreground = ${colors.cyan}
 exec = ~/.config/polybar/uptime
-
-[module/power-label]
-type = custom/text
-content = " Power "
-
-content-foreground = ${colors.bg}
-content-background = ${colors.magenta-alt}
-click-left = bash ~/.config/popups/power/power
-
 ; vim:ft=dosini
 
