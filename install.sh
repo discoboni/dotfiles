@@ -4,7 +4,7 @@
 ./pacaur_installer.sh
 #install necessary programs
 #List of programs:
-sudo pacman -S zathua zathura-pdf-poppler redshift alsa-utils polkit ttf-dejavu openssh neovim rxvt-unicode git
+sudo pacman -S ttf-fira-mono playerctl zathua zathura-pdf-poppler redshift alsa-utils polkit ttf-dejavu openssh neovim rxvt-unicode git
 #for sound just got to alsamixer and umute
 
 #zathura && zathura-pdf-poppler: pdf reader
@@ -13,7 +13,7 @@ sudo pacman -S zathua zathura-pdf-poppler redshift alsa-utils polkit ttf-dejavu 
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-pacaur -S polybar i3-gaps python-dbus ttf-iosevka
+pacaur -S polybar i3-gaps python-dbus
 
 #run the script to link configs to their respective paths
 #Symbolic link, meaning I can edit the configs from the dotfiles folder

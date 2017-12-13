@@ -75,6 +75,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'chriskempson/base16-vim'
 Plug 'morhetz/gruvbox'
 	let g:gruvbox_contrast_dark="hard"
+Plug 'Lokaltog/vim-distinguished'
 
 " ======= GIT ========
 Plug 'airblade/vim-gitgutter'		"shows modification since last commit

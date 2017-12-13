@@ -1,4 +1,4 @@
-URxvt*font: xft:Iosevka:size=13:style=bold
+URxvt*font: xft:Fira Mono:size=12:style=regular
 URxvt*scrollBar: False
 
 ! --==Colors==--
