@@ -4,7 +4,10 @@
 ./pacaur_installer.sh
 #install necessary programs
 #List of programs:
-sudo pacman -S redshift polkit ttf-dejavu openssh neovim rxvt-unicode git
+sudo pacman -S zathua zathura-pdf-poppler redshift alsa-utils polkit ttf-dejavu openssh neovim rxvt-unicode git
+#for sound just got to alsamixer and umute
+
+#zathura && zathura-pdf-poppler: pdf reader
 
 #install 'vim-plug' - a plugin manager for NEOVIM
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \

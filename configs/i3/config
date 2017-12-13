@@ -5,7 +5,7 @@
 ########################################
 
 #self explanatory
-workspace 1 output HDMI-0
+workspace 1 output DVI-I-0
 #no border
 for_window [class="^.*"] border pixel 0
 #no gaps if there is only one window
